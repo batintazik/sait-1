@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрация Нижнекамска | Новый портал</title>
+    <!-- Подключаем Tailwind CSS для быстрого и красивого дизайна -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Nizhnekamsk_drama_theatre.jpg/1200px-Nizhnekamsk_drama_theatre.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .service-card { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Верхняя панель -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold">НК</div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-blue-900">Нижнекамск</h1>
+                    <p class="text-xs text-gray-500">Официальный портал города</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-blue-900">О городе</a>
+                <a href="#" class="hover:text-blue-900">Структура</a>
+                <a href="#" class="hover:text-blue-900">Документы</a>
+                <a href="#" class="hover:text-blue-900">Контакты</a>
+            </nav>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                Личный кабинет
+            </button>
+        </div>
+    </header>
+
+    <!-- Герой-блок с поиском -->
+    <section class="hero-bg py-20 px-4 text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Чем можем помочь сегодня?</h2>
+            <p class="text-lg text-blue-100 mb-8">Единое окно для жителей Нижнекамска. Быстро, удобно, онлайн.</p>
+            
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="Например: записаться к врачу, оплата ЖКХ..." 
+                       class="w-full py-4 pl-6 pr-14 rounded-xl text-gray-800 shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-400">
+                <button class="absolute right-3 top-3 bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-lg transition">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full cursor-pointer hover:bg-white/30">Погода</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full cursor-pointer hover:bg-white/30">Транспорт</span>
+                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full cursor-pointer hover:bg-white/30">Запись в школу</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок важного объявления -->
+    <section class="container mx-auto px-4 -mt-10 relative z-10">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            <img src="https://files.pravda-nn.ru/2024/11/Kontrakt1-1200x722.jpgт" alt="Важное объявление от администрации" class="w-full h-auto object-cover">
+        </div>
+    </section>
+
+    <!-- Популярные услуги (Сетка) -->
+    <section class="py-16 container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8">Популярные услуги</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- Карточка 1 -->
+            <div class="service-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 cursor-pointer text-center group">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-heartbeat text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Здоровье</h4>
+                <p class="text-xs text-gray-500 mt-2">Запись к врачу, аптеки</p>
+            </div>
+            <!-- Карточка 2 -->
+            <div class="service-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 cursor-pointer text-center group">
+                <div class="w-14 h-14 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                    <i class="fas fa-home text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">ЖКХ</h4>
+                <p class="text-xs text-gray-500 mt-2">Передача показаний, оплата</p>
+            </div>
+            <!-- Карточка 3 -->
+            <div class="service-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 cursor-pointer text-center group">
+                <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Образование</h4>
+                <p class="text-xs text-gray-500 mt-2">Школы, сады, кружки</p>
+            </div>
+            <!-- Карточка 4 -->
+            <div class="service-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 cursor-pointer text-center group">
+                <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-600 group-hover:text-white transition">
+                    <i class="fas fa-bus text-2xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Транспорт</h4>
+                <p class="text-xs text-gray-500 mt-2">Расписание, карты</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Новости и События -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-end mb-8">
+                <h3 class="text-2xl font-bold text-gray-900">Новости города</h3>
+                <a href="#" class="text-blue-600 font-medium hover:underline">Все новости →</a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Новость 1 -->
+                <article class="group cursor-pointer">
+                    <div class="h-48 bg-gray-200 rounded-xl overflow-hidden mb-4 relative">
+                        <img src="https://via.placeholder.com/400x250?text=News+1" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 px-2 py-1 text-xs font-bold rounded text-blue-900">Важно</span>
+                    </div>
+                    <time class="text-sm text-gray-500 block mb-2">15 марта 2026</time>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">Открытие нового парка в районе ГЭС</h4>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">Завершилась реконструкция зеленой зоны. Жителей ждут новые дорожки и площадки...</p>
+                </article>
+
+                <!-- Новость 2 -->
+                <article class="group cursor-pointer">
+                    <div class="h-48 bg-gray-200 rounded-xl overflow-hidden mb-4 relative">
+                        <img src="https://via.placeholder.com/400x250?text=News+2" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <time class="text-sm text-gray-500 block mb-2">14 марта 2026</time>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">Изменение маршрутов автобусов</h4>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">С понедельника изменяется схема движения маршрутов № 5 и № 12 в связи с ремонтом...</p>
+                </article>
+
+                <!-- Новость 3 -->
+                <article class="group cursor-pointer">
+                    <div class="h-48 bg-gray-200 rounded-xl overflow-hidden mb-4 relative">
+                        <img src="https://via.placeholder.com/400x250?text=News+3" alt="News" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <time class="text-sm text-gray-500 block mb-2">13 марта 2026</time>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">Прием граждан главой города</h4>
+                    <p class="text-gray-600 text-sm mt-2 line-clamp-2">График приема на апрель уже опубликован. Запись открыта через портал...</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обратная связь / Экстренные службы -->
+    <section class="py-16 container mx-auto px-4">
+        <div class="bg-blue-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Сообщить о проблеме</h3>
+                <p class="text-blue-200 max-w-lg">Яма на дороге, неубранный снег или сломанная лавочка? Сообщите нам, и мы исправим это в кратчайшие сроки.</p>
+            </div>
+            <div class="flex gap-4">
+                <button class="bg-white text-blue-900 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
+                    <i class="fas fa-camera mr-2"></i> Фото проблемы
+                </button>
+                <button class="bg-blue-800 text-white border border-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition">
+                    <i class="fas fa-phone mr-2"></i> 112
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div>
+                <h5 class="text-white font-bold mb-4">Администрация НК</h5>
+                <p class="text-sm">Официальный информационный портал города Нижнекамск.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Разделы</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">Новости</a></li>
+                    <li><a href="#" class="hover:text-white">Документы</a></li>
+                    <li><a href="#" class="hover:text-white">Противодействие коррупции</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Контакты</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fas fa-map-marker-alt w-5"></i> ул. Мусы Джалиля, 33</li>
+                    <li><i class="fas fa-phone w-5"></i> +7 (8555) 35-XX-XX</li>
+                    <li><i class="fas fa-envelope w-5"></i> info@e-nkama.ru</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-4">Мы в соцсетях</h5>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-xs">
+            &copy; 2026 Администрация города Нижнекамск. Все права защищены. Дизайн концепт.
+        </div>
+    </footer>
+
+</body>
+</html> <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администрация Нижнекамска | Здоровье</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.6)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Nizhnekamsk_drama_theatre.jpg/1200px-Nizhnekamsk_drama_theatre.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Стили для скроллбара в списке больниц */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Навигация -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold group-hover:bg-blue-700 transition">НК</div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-blue-900">Нижнекамск</h1>
+                    <p class="text-xs text-gray-500">Портал города</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-blue-900">Главная</a>
+                <a href="#health-section" class="text-blue-600 font-bold">Здоровье</a>
+                <a href="#" class="hover:text-blue-900">Новости</a>
+            </nav>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                Госуслуги
+            </button>
+        </div>
+    </header>
+
+    <!-- Секция Здоровья (Заменяет главный баннер для этой страницы) -->
+    <section id="health-section" class="bg-blue-50 py-12 border-b border-blue-100">
+        <div class="container mx-auto px-4 text-center">
+            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4 inline-block">Медицина</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Медицинские учреждения города</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Единый справочник больниц, поликлиник и аптек Нижнекамска. Актуальные телефоны регистратур и адреса.</p>
+            
+            <!-- Быстрые действия -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="tel:103" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-red-200 transition flex items-center gap-2">
+                    <i class="fas fa-ambulance"></i> Вызов скорой (103)
+                </a>
+                <a href="https://uslugi.tatarstan.ru/" target="_blank" class="bg-white hover:bg-gray-50 text-blue-900 border border-blue-200 px-6 py-3 rounded-xl font-bold shadow-sm transition flex items-center gap-2">
+                    <i class="fas fa-calendar-check"></i> Запись к врачу онлайн
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основной контент: Список больниц и Карта -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <div class="grid lg:grid-cols-3 gap-8">
+            
+            <!-- Левая колонка: Список учреждений -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- ГАУЗ "НЦРМБ" (Главная больница) -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">ГБУЗ «НЦРМБ» МЗ РТ</h3>
+                            <p class="text-sm text-gray-500">Многопрофильный медицинский центр</p>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Работает</span>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <p class="text-xs text-gray-400 uppercase font-bold mb-1">Приемный покой (круглосуточно)</p>
+                            <a href="tel:+78555350003" class="text-lg font-bold text-blue-900 hover:text-blue-600 block">+7 (8555) 35-00-03</a>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <p class="text-xs text-gray-400 uppercase font-bold mb-1">Поликлиника №1 (Регистратура)</p>
+                            <a href="tel:+78555350303" class="text-lg font-bold text-blue-900 hover:text-blue-600 block">+7 (8555) 35-03-03</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center text-gray-600 text-sm mb-4">
+                        <i class="fas fa-map-marker-alt w-6 text-blue-500"></i>
+                        <span>ул. Строителей, д. 4</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://yandex.ru/maps/-/CDu~qJk-" target="_blank" class="flex-1 bg-blue-50 text-blue-700 py-2 rounded-lg text-sm font-semibold text-center hover:bg-blue-100 transition">
+                            <i class="fas fa-directions mr-1"></i> Маршрут
+                        </a>
+                        <a href="http://ncrmb.ru/" target="_blank" class="flex-1 bg-white border border-gray-200 text-gray-700 py-2 rounded-lg text-sm font-semibold text-center hover:bg-gray-50 transition">
+                            Сайт больницы
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Детская больница -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Детская городская больница</h3>
+                            <p class="text-sm text-gray-500">Стационар и поликлиника для детей</p>
+                        </div>
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">Работает</span>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                        <p class="text-xs text-gray-400 uppercase font-bold mb-1">Справочная служба / Регистратура</p>
+                        <a href="tel:+78555352222" class="text-lg font-bold text-blue-900 hover:text-blue-600 block">+7 (8555) 35-22-22</a>
+                    </div>
+                    
+                    <div class="flex items-center text-gray-600 text-sm mb-4">
+                        <i class="fas fa-map-marker-alt w-6 text-blue-500"></i>
+                        <span>пр. Химиков, д. 56</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://yandex.ru/maps/-/CDu~qJkA" target="_blank" class="flex-1 bg-blue-50 text-blue-700 py-2 rounded-lg text-sm font-semibold text-center hover:bg-blue-100 transition">
+                            <i class="fas fa-directions mr-1"></i> Маршрут
+                        </a>
+                        <a href="#" class="flex-1 bg-white border border-gray-200 text-gray-700 py-2 rounded-lg text-sm font-semibold text-center hover:bg-gray-50 transition">
+                            Сайт больницы
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Стоматология -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Стоматологическая поликлиника</h3>
+                            <p class="text-sm text-gray-500">Лечение зубов для взрослых и детей</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
+                        <p class="text-xs text-gray-400 uppercase font-bold mb-1">Регистратура</p>
+                        <a href="tel:+78555353030" class="text-lg font-bold text-blue-900 hover:text-blue-600 block">+7 (8555) 35-30-30</a>
+                    </div>
+                    
+                    <div class="flex items-center text-gray-600 text-sm mb-4">
+                        <i class="fas fa-map-marker-alt w-6 text-blue-500"></i>
+                        <span>ул. Спортивная, д. 10</span>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://yandex.ru/maps/-/CDu~qJkB" target="_blank" class="flex-1 bg-blue-50 text-blue-700 py-2 rounded-lg text-sm font-semibold text-center hover:bg-blue-100 transition">
+                            <i class="fas fa-directions mr-1"></i> Маршрут
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Правая колонка: Карта и Экстренные номера -->
+            <div class="space-y-6">
+                
+                <!-- Виджет карты (Заглушка, в реальности тут iframe Яндекс.Карт или 2ГИС) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-96 relative group">
+                    <img src="https://via.placeholder.com/400x600?text=Карта+Нижнекамска" alt="Карта" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-lg text-center">
+                            <p class="font-bold text-gray-900">Интерактивная карта</p>
+                            <p class="text-xs text-gray-500">Все аптеки и больницы</p>
+                        </div>
+                    </div>
+                    <a href="https://nizhnekamsk.2gis.ru/" target="_blank" class="absolute inset-0 w-full h-full cursor-pointer" title="Открыть полную карту"></a>
+                </div>
+
+                <!-- Важные телефоны -->
+                <div class="bg-blue-900 rounded-2xl p-6 text-white shadow-lg">
+                    <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                        <i class="fas fa-phone-volume text-red-400"></i> Экстренные службы
+                    </h4>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center border-b border-blue-800 pb-2">
+                            <span class="text-blue-200 text-sm">Скорая помощь</span>
+                            <a href="tel:103" class="font-bold text-xl hover:text-red-400 transition">103</a>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-blue-800 pb-2">
+                            <span class="text-blue-200 text-sm">Единый номер</span>
+                            <a href="tel:112" class="font-bold text-xl hover:text-red-400 transition">112</a>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-blue-200 text-sm">Дежурный врач (город)</span>
+                            <a href="tel:+78555350003" class="font-bold text-lg hover:text-red-400 transition">35-00-03</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Баннер (из предыдущего запроса) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                    <img src="URL_ВАШЕГО_ИЗОБРАЖЕНИЯ_ЗДЕСЬ" alt="Объявление" class="w-full h-auto">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-gray-400 py-12 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Администрация города Нижнекамск. Раздел «Здоровье».</p>
+            <p class="text-xs text-gray-600 mt-2">Информация носит справочный характер. В экстренных случаях звоните 112.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
