@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбери жизнь: Правда о наркотиках</title>
+    <style>
+        /* --- CSS СТИЛИ --- */
+        :root {
+            --primary-color: #2c3e50; /* Темно-синий */
+            --accent-color: #e74c3c; /* Красный для акцентов */
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        /* Шапка */
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        /* Секции */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        /* Карточки фактов */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Секция помощи */
+        .help-section {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .help-section .section-title {
+            color: var(--white);
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+            color: var(--accent-color);
+        }
+
+        /* Футер */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .container { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Здоровый Выбор</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проблеме</a></li>
+                    <li><a href="#consequences">Последствия</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Жизнь ярче без наркотиков</h1>
+            <p>Наркомания — это болезнь, которая крадет будущее. Узнай правду, пока не стало поздно.</p>
+            <a href="#help" class="btn">Получить помощь</a>
+        </div>
+    </section>
+
+    <!-- Секция о проблеме -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Почему это происходит?</h2>
+            <div class="facts-grid">
+                <div class="card">
+                    <h3>Иллюзия контроля</h3>
+                    <p>Многие начинают "из любопытства" или "чтобы расслабиться", будучи уверенными, что бросят в любой момент. Но химическая зависимость наступает быстрее, чем вы думаете.</p>
+                </div>
+                <div class="card">
+                    <h3>Социальное давление</h3>
+                    <p>Окружение играет ключевую роль. Часто первый опыт происходит в компании, где отказ воспринимается как слабость. Умейте говорить "НЕТ".</p>
+                </div>
+                <div class="card">
+                    <h3>Психологические проблемы</h3>
+                    <p>Наркотики часто используют как способ убежать от депрессии, стресса или одиночества. Но это лишь усугубляет проблему, создавая замкнутый круг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция последствий -->
+    <section id="consequences" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Цена одной дозы</h2>
+            <div class="facts-grid">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Физическое здоровье</h3>
+                    <p>Разрушение печени, почек, сердца и легких. Высокий риск передозировки, ВИЧ и гепатита. Необратимые изменения в мозге.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Психика</h3>
+                    <p>Паранойя, галлюцинации, потеря памяти, полная деградация личности. Человек перестает быть собой.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Социальная жизнь</h3>
+                    <p>Потеря работы, учебы, друзей и семьи. Криминал и тюрьма становятся частыми спутниками зависимости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция помощи -->
+    <section id="help" class="help-section">
+        <div class="container">
+            <h2 class="section-title">Выход есть всегда</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Зависимость — это болезнь, которую можно лечить. Не бойтесь просить о помощи. 
+                Это анонимно и бесплатно.
+            </p>
+            
+            <p>Всероссийский телефон доверия для детей, подростков и их родителей:</p>
+            <a href="tel:88002000122" class="phone-number">8-800-2000-122</a>
+            
+            <p>Скорая помощь:</p>
+            <a href="tel:103" class="phone-number">103</a>
+            
+            <br>
+            <a href="#" class="btn" onclick="alert('Здесь может быть форма для записи к специалисту')">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container" style="flex-direction: column;">
+            <p>&copy; 2023 Проект "Здоровый Выбор". Все права защищены.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Информация на сайте носит ознакомительный характер.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт для плавного скролла -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбери жизнь: Правда о наркотиках</title>
+    <style>
+        /* --- CSS СТИЛИ --- */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Стили для раздела музыкантов */
+        .musicians-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+        }
+
+        .musicians-section .section-title {
+            color: var(--white);
+        }
+
+        .musicians-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .musician-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-color);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .musician-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-color);
+        }
+
+        .musician-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .musician-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .musician-years {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .musician-genre {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .musician-story {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .musician-lesson {
+            background: var(--light-bg);
+            padding: 15px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 5px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .help-section {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .help-section .section-title {
+            color: var(--white);
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: #c0392b;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .container { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
+            .musician-card { padding: 20px; }
+            .musician-name { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Здоровый Выбор</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проблеме</a></li>
+                    <li><a href="#musicians">Истории</a></li>
+                    <li><a href="#consequences">Последствия</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Жизнь ярче без наркотиков</h1>
+            <p>Наркомания — это болезнь, которая крадет будущее. Узнай правду, пока не стало поздно.</p>
+            <a href="#help" class="btn">Получить помощь</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Почему это происходит?</h2>
+            <div class="facts-grid">
+                <div class="card">
+                    <h3>Иллюзия контроля</h3>
+                    <p>Многие начинают "из любопытства" или "чтобы расслабиться", будучи уверенными, что бросят в любой момент. Но химическая зависимость наступает быстрее, чем вы думаете.</p>
+                </div>
+                <div class="card">
+                    <h3>Социальное давление</h3>
+                    <p>Окружение играет ключевую роль. Часто первый опыт происходит в компании, где отказ воспринимается как слабость. Умейте говорить "НЕТ".</p>
+                </div>
+                <div class="card">
+                    <h3>Психологические проблемы</h3>
+                    <p>Наркотики часто используют как способ убежать от депрессии, стресса или одиночества. Но это лишь усугубляет проблему, создавая замкнутый круг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВЫЙ РАЗДЕЛ: Истории музыкантов -->
+    <section id="musicians" class="musicians-section">
+        <div class="container">
+            <h2 class="section-title">Потерянные голоса</h2>
+            <p class="section-subtitle">
+                Талантливые музыканты, чьи жизни оборвались из-за наркотиков. 
+                Их истории — напоминание о том, что слава и талант не защищают от зависимости.
+            </p>
+            
+            <div class="facts-grid">
+                <!-- Whitney Houston -->
+                <div class="musician-card">
+                    <div class="musician-name">Уитни Хьюстон</div>
+                    <div class="musician-years">1963 — 2012 (48 лет)</div>
+                    <span class="musician-genre">R&B, Pop</span>
+                    <div class="musician-story">
+                        <p>Одна из самых продаваемых певиц в истории музыки. Обладательница 6 премий Грэмми. Её борьба с зависимостью от кокаина и марихуаны длилась годы.</p>
+                        <p><strong>Причина смерти:</strong> утопление в ванной из-за болезни сердца и употребления кокаина.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Даже самая яркая звезда может погаснуть из-за зависимости."
+                    </div>
+                </div>
+
+                <!-- Michael Jackson -->
+                <div class="musician-card">
+                    <div class="musician-name">Майкл Джексон</div>
+                    <div class="musician-years">1958 — 2009 (50 лет)</div>
+                    <span class="musician-genre">Pop, R&B</span>
+                    <div class="musician-story">
+                        <p>Король поп-музыки, легенда сценического искусства. Страдал от хронической бессонницы и зависимости от рецептурных препаратов.</p>
+                        <p><strong>Причина смерти:</strong> острое отравление пропофолом и другими седативными средствами.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Лекарственная зависимость так же опасна, как и уличная наркомания."
+                    </div>
+                </div>
+
+                <!-- Prince -->
+                <div class="musician-card">
+                    <div class="musician-name">Принс</div>
+                    <div class="musician-years">1958 — 2016 (57 лет)</div>
+                    <span class="musician-genre">Funk, Rock, Pop</span>
+                    <div class="musician-story">
+                        <p>Гениальный мультиинструменталист и композитор. Страдал от хронических болей и зависимости от опиоидных обезболивающих.</p>
+                        <p><strong>Причина смерти:</strong> случайная передозировка фентанилом — синтетическим опиоидом в 50 раз сильнее героина.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Обезболивающие препараты могут стать смертельной ловушкой."
+                    </div>
+                </div>
+
+                <!-- Amy Winehouse -->
+                <div class="musician-card">
+                    <div class="musician-name">Эми Уайнхаус</div>
+                    <div class="musician-years">1983 — 2011 (27 лет)</div>
+                    <span class="musician-genre">Soul, Jazz</span>
+                    <div class="musician-story">
+                        <p>Талантливая певица с уникальным голосом. Открыто боролась с зависимостью от алкоголя и наркотиков. Её альбом "Back to Black" получил 5 премий Грэмми.</p>
+                        <p><strong>Причина смерти:</strong> алкогольное отравление после периода воздержания.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Талант не спасает от зависимости. Эми вошла в печальный 'Клуб 27'."
+                    </div>
+                </div>
+
+                <!-- Jimi Hendrix -->
+                <div class="musician-card">
+                    <div class="musician-name">Джими Хендрикс</div>
+                    <div class="musician-years">1942 — 1970 (27 лет)</div>
+                    <span class="musician-genre">Rock, Blues</span>
+                    <div class="musician-story">
+                        <p>Величайший гитарист в истории рок-музыки. Революционизировал звучание электрогитары. Страдал от зависимости от ЛСД и амфетаминов.</p>
+                        <p><strong>Причина смерти:</strong> аспирация рвотными массами после приёма снотворного с алкоголем.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Смешивание веществ — смертельно опасно. Ещё один участник 'Клуба 27'."
+                    </div>
+                </div>
+
+                <!-- Kurt Cobain -->
+                <div class="musician-card">
+                    <div class="musician-name">Курт Кобейн</div>
+                    <div class="musician-years">1967 — 1994 (27 лет)</div>
+                    <span class="musician-genre">Grunge, Rock</span>
+                    <div class="musician-story">
+                        <p>Лидер группы Nirvana, голос поколения 90-х. Боролся с хроническими болями в желудке и зависимостью от героина.</p>
+                        <p><strong>Причина смерти:</strong> самоубийство с применением огнестрельного оружия на фоне героиновой зависимости и депрессии.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Наркотики усугубляют депрессию и могут привести к трагедии."
+                    </div>
+                </div>
+
+                <!-- Elvis Presley -->
+                <div class="musician-card">
+                    <div class="musician-name">Элвис Пресли</div>
+                    <div class="musician-years">1935 — 1977 (42 года)</div>
+                    <span class="musician-genre">Rock'n'Roll</span>
+                    <div class="musician-story">
+                        <p>Король рок-н-ролла, икона XX века. Страдал от множества заболеваний и зависимости от рецептурных препаратов.</p>
+                        <p><strong>Причина смерти:</strong> сердечный приступ, вызванный передозировкой рецептурных лекарств (в организме нашли 14 различных препаратов).</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Даже короли не властны над зависимостью. Аптечные наркотики убивают."
+                    </div>
+                </div>
+
+                <!-- Philip Seymour Hoffman -->
+                <div class="musician-card">
+                    <div class="musician-name">Джим Моррисон</div>
+                    <div class="musician-years">1943 — 1971 (27 лет)</div>
+                    <span class="musician-genre">Rock</span>
+                    <div class="musician-story">
+                        <p>Легендарный фронтмен The Doors, поэт и бунтарь. Известен своим эпатажным поведением и зависимостью от алкоголя.</p>
+                        <p><strong>Причина смерти:</strong> сердечная недостаточность, предположительно вызванная передозировкой героина в Париже.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Последний участник 'Клуба 27'. Романтизация наркотиков ведёт к смерти."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consequences" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Цена одной дозы</h2>
+            <div class="facts-grid">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Физическое здоровье</h3>
+                    <p>Разрушение печени, почек, сердца и легких. Высокий риск передозировки, ВИЧ и гепатита. Необратимые изменения в мозге.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Психика</h3>
+                    <p>Паранойя, галлюцинации, потеря памяти, полная деградация личности. Человек перестает быть собой.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Социальная жизнь</h3>
+                    <p>Потеря работы, учебы, друзей и семьи. Криминал и тюрьма становятся частыми спутниками зависимости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="help" class="help-section">
+        <div class="container">
+            <h2 class="section-title">Выход есть всегда</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Зависимость — это болезнь, которую можно лечить. Не бойтесь просить о помощи. 
+                Это анонимно и бесплатно.
+            </p>
+            
+            <p>Всероссийский телефон доверия для детей, подростков и их родителей:</p>
+            <a href="tel:88002000122" class="phone-number">8-800-2000-122</a>
+            
+            <p>Скорая помощь:</p>
+            <a href="tel:103" class="phone-number">103</a>
+            
+            <br>
+            <a href="#" class="btn" onclick="alert('Здесь может быть форма для записи к специалисту')">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="flex-direction: column;">
+            <p>&copy; 2023 Проект "Здоровый Выбор". Все права защищены.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Информация на сайте носит ознакомительный характер.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбери жизнь: Правда о наркотиках</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .musicians-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+        }
+
+        .musicians-section .section-title {
+            color: var(--white);
+        }
+
+        .musicians-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .musician-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-color);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .musician-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-color);
+        }
+
+        .musician-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .musician-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .musician-years {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .musician-genre {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .musician-story {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .musician-lesson {
+            background: var(--light-bg);
+            padding: 15px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 5px;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Стили для раздела про спайс */
+        .spice-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: var(--white);
+        }
+
+        .spice-section .section-title {
+            color: var(--white);
+        }
+
+        .spice-section .section-subtitle {
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+        }
+
+        .spice-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .spice-image {
+            text-align: center;
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .spice-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .spice-text {
+            background: rgba(255,255,255,0.95);
+            color: var(--text-color);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .spice-text h3 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .spice-text ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .spice-text ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .spice-text ul li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .spice-warning {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .help-section {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .help-section .section-title {
+            color: var(--white);
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: #c0392b;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .container { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
+            .musician-card { padding: 20px; }
+            .musician-name { font-size: 1.4rem; }
+            .spice-content {
+                grid-template-columns: 1fr;
+            }
+            .spice-warning {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Здоровый Выбор</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проблеме</a></li>
+                    <li><a href="#spice">Спайс</a></li>
+                    <li><a href="#musicians">Истории</a></li>
+                    <li><a href="#consequences">Последствия</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Жизнь ярче без наркотиков</h1>
+            <p>Наркомания — это болезнь, которая крадет будущее. Узнай правду, пока не стало поздно.</p>
+            <a href="#help" class="btn">Получить помощь</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Почему это происходит?</h2>
+            <div class="facts-grid">
+                <div class="card">
+                    <h3>Иллюзия контроля</h3>
+                    <p>Многие начинают "из любопытства" или "чтобы расслабиться", будучи уверенными, что бросят в любой момент. Но химическая зависимость наступает быстрее, чем вы думаете.</p>
+                </div>
+                <div class="card">
+                    <h3>Социальное давление</h3>
+                    <p>Окружение играет ключевую роль. Часто первый опыт происходит в компании, где отказ воспринимается как слабость. Умейте говорить "НЕТ".</p>
+                </div>
+                <div class="card">
+                    <h3>Психологические проблемы</h3>
+                    <p>Наркотики часто используют как способ убежать от депрессии, стресса или одиночества. Но это лишь усугубляет проблему, создавая замкнутый круг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВЫЙ РАЗДЕЛ: Спайс -->
+    <section id="spice" class="spice-section">
+        <div class="container">
+            <h2 class="section-title">⚠️ СПАЙС — СИНТЕТИЧЕСКИЙ ЯД ⚠️</h2>
+            <p class="section-subtitle">
+                Курительные смеси — это не «лёгкие наркотики», а смертельно опасные химические вещества!
+            </p>
+            
+            <div class="spice-content">
+                <div class="spice-image">
+                    <img src="spice-warning.jpg" alt="Курить спайс очень плохо">
+                </div>
+                
+                <div class="spice-text">
+                    <h3>Что такое спайс?</h3>
+                    <p>Спайс (курительные смеси) — это синтетические каннабиноиды, которыми опрыскивают обычные травы. Это НЕ безопасная альтернатива марихуаны!</p>
+                    
+                    <h3 style="margin-top: 30px; color: var(--accent-color);">Почему спайс особенно опасен?</h3>
+                    <ul>
+                        <li>Невозможно узнать дозировку и состав</li>
+                        <li>Вызывает мгновенную зависимость (1-2 раза)</li>
+                        <li>Приводит к психозам и шизофрении</li>
+                        <li>Разрушает мозг необратимо</li>
+                        <li>Частые смертельные передозировки</li>
+                        <li>Вызывает суицидальные мысли</li>
+                        <li>Разрушает все внутренние органы</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="spice-warning">
+                🚫 КУРИТЬ СПАЙС — ОЧЕНЬ ПЛОХО! 🚫<br>
+                <span style="font-size: 1.4rem; display: block; margin-top: 15px;">
+                    СПАЙС — НАРКОТИК ДЛЯ ЛОХА
+                </span>
+            </div>
+
+            <div class="facts-grid" style="margin-top: 50px;">
+                <div class="card" style="background: rgba(255,255,255,0.95);">
+                    <h3>Физические последствия</h3>
+                    <p>Тахикардия, рвота, потеря сознания, судороги, почечная недостаточность, инфаркт, инсульт. Спайс в 5-10 раз сильнее обычной марихуаны!</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.95);">
+                    <h3>Психические последствия</h3>
+                    <p>Панические атаки, паранойя, галлюцинации, депрессия, суицидальные мысли, полная потеря личности. Человек перестаёт быть собой.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.95);">
+                    <h3>Социальные последствия</h3>
+                    <p>Потеря друзей, семьи, работы, учёбы. Криминал, тюрьма, полная деградация. Спайс разрушает жизнь за несколько месяцев!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="musicians" class="musicians-section">
+        <div class="container">
+            <h2 class="section-title">Потерянные голоса</h2>
+            <p class="section-subtitle">
+                Талантливые музыканты, чьи жизни оборвались из-за наркотиков. 
+                Их истории — напоминание о том, что слава и талант не защищают от зависимости.
+            </p>
+            
+            <div class="facts-grid">
+                <div class="musician-card">
+                    <div class="musician-name">Уитни Хьюстон</div>
+                    <div class="musician-years">1963 — 2012 (48 лет)</div>
+                    <span class="musician-genre">R&B, Pop</span>
+                    <div class="musician-story">
+                        <p>Одна из самых продаваемых певиц в истории музыки. Обладательница 6 премий Грэмми. Её борьба с зависимостью от кокаина и марихуаны длилась годы.</p>
+                        <p><strong>Причина смерти:</strong> утопление в ванной из-за болезни сердца и употребления кокаина.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Даже самая яркая звезда может погаснуть из-за зависимости."
+                    </div>
+                </div>
+
+                <div class="musician-card">
+                    <div class="musician-name">Майкл Джексон</div>
+                    <div class="musician-years">1958 — 2009 (50 лет)</div>
+                    <span class="musician-genre">Pop, R&B</span>
+                    <div class="musician-story">
+                        <p>Король поп-музыки, легенда сценического искусства. Страдал от хронической бессонницы и зависимости от рецептурных препаратов.</p>
+                        <p><strong>Причина смерти:</strong> острое отравление пропофолом и другими седативными средствами.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Лекарственная зависимость так же опасна, как и уличная наркомания."
+                    </div>
+                </div>
+
+                <div class="musician-card">
+                    <div class="musician-name">Принс</div>
+                    <div class="musician-years">1958 — 2016 (57 лет)</div>
+                    <span class="musician-genre">Funk, Rock, Pop</span>
+                    <div class="musician-story">
+                        <p>Гениальный мультиинструменталист и композитор. Страдал от хронических болей и зависимости от опиоидных обезболивающих.</p>
+                        <p><strong>Причина смерти:</strong> случайная передозировка фентанилом — синтетическим опиоидом в 50 раз сильнее героина.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Обезболивающие препараты могут стать смертельной ловушкой."
+                    </div>
+                </div>
+
+                <div class="musician-card">
+                    <div class="musician-name">Эми Уайнхаус</div>
+                    <div class="musician-years">1983 — 2011 (27 лет)</div>
+                    <span class="musician-genre">Soul, Jazz</span>
+                    <div class="musician-story">
+                        <p>Талантливая певица с уникальным голосом. Открыто боролась с зависимостью от алкоголя и наркотиков. Её альбом "Back to Black" получил 5 премий Грэмми.</p>
+                        <p><strong>Причина смерти:</strong> алкогольное отравление после периода воздержания.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Талант не спасает от зависимости. Эми вошла в печальный 'Клуб 27'."
+                    </div>
+                </div>
+
+                <div class="musician-card">
+                    <div class="musician-name">Джими Хендрикс</div>
+                    <div class="musician-years">1942 — 1970 (27 лет)</div>
+                    <span class="musician-genre">Rock, Blues</span>
+                    <div class="musician-story">
+                        <p>Величайший гитарист в истории рок-музыки. Революционизировал звучание электрогитары. Страдал от зависимости от ЛСД и амфетаминов.</p>
+                        <p><strong>Причина смерти:</strong> аспирация рвотными массами после приёма снотворного с алкоголем.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Смешивание веществ — смертельно опасно. Ещё один участник 'Клуба 27'."
+                    </div>
+                </div>
+
+                <div class="musician-card">
+                    <div class="musician-name">Курт Кобейн</div>
+                    <div class="musician-years">1967 — 1994 (27 лет)</div>
+                    <span class="musician-genre">Grunge, Rock</span>
+                    <div class="musician-story">
+                        <p>Лидер группы Nirvana, голос поколения 90-х. Боролся с хроническими болями в желудке и зависимостью от героина.</p>
+                        <p><strong>Причина смерти:</strong> самоубийство с применением огнестрельного оружия на фоне героиновой зависимости и депрессии.</p>
+                    </div>
+                    <div class="musician-lesson">
+                        "Наркотики усугубляют депрессию и могут привести к трагедии."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consequences" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Цена одной дозы</h2>
+            <div class="facts-grid">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Физическое здоровье</h3>
+                    <p>Разрушение печени, почек, сердца и легких. Высокий риск передозировки, ВИЧ и гепатита. Необратимые изменения в мозге.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Психика</h3>
+                    <p>Паранойя, галлюцинации, потеря памяти, полная деградация личности. Человек перестает быть собой.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Социальная жизнь</h3>
+                    <p>Потеря работы, учебы, друзей и семьи. Криминал и тюрьма становятся частыми спутниками зависимости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="help" class="help-section">
+        <div class="container">
+            <h2 class="section-title">Выход есть всегда</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Зависимость — это болезнь, которую можно лечить. Не бойтесь просить о помощи. 
+                Это анонимно и бесплатно.
+            </p>
+            
+            <p>Всероссийский телефон доверия для детей, подростков и их родителей:</p>
+            <a href="tel:88002000122" class="phone-number">8-800-2000-122</a>
+            
+            <p>Скорая помощь:</p>
+            <a href="tel:103" class="phone-number">103</a>
+            
+            <br>
+            <a href="#" class="btn" onclick="alert('Здесь может быть форма для записи к специалисту')">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="flex-direction: column;">
+            <p>&copy; 2023 Проект "Здоровый Выбор". Все права защищены.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Информация на сайте носит ознакомительный характер.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html> 
+ 

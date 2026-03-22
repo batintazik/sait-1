@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбери жизнь: Правда о наркотиках</title>
+    <style>
+        /* --- CSS СТИЛИ --- */
+        :root {
+            --primary-color: #2c3e50; /* Темно-синий */
+            --accent-color: #e74c3c; /* Красный для акцентов */
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-f', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        /* Шапка */
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        /* Секции */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+
+        /* Карточки фактов */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Секция помощи */
+        .help-section {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .help-section .section-title {
+            color: var(--white);
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+            color: var(--accent-color);
+        }
+
+        /* Футер */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .container { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Здоровый Выбор</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проблеме</a></li>
+                    <li><a href="#consequences">Последствия</a></li>
+                    <li><a href="#help">Помощь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Жизнь ярче без наркотиков</h1>
+            <p>Наркомания — это болезнь, которая крадет будущее. Узнай правду, пока не стало поздно.</p>
+            <a href="#help" class="btn">Получить помощь</a>
+        </div>
+    </section>
+
+    <!-- Секция о проблеме -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Почему это происходит?</h2>
+            <div class="facts-grid">
+                <div class="card">
+                    <h3>Иллюзия контроля</h3>
+                    <p>Многие начинают "из любопытства" или "чтобы расслабиться", будучи уверенными, что бросят в любой момент. Но химическая зависимость наступает быстрее, чем вы думаете.</p>
+                </div>
+                <div class="card">
+                    <h3>Социальное давление</h3>
+                    <p>Окружение играет ключевую роль. Часто первый опыт происходит в компании, где отказ воспринимается как слабость. Умейте говорить "НЕТ".</p>
+                </div>
+                <div class="card">
+                    <h3>Психологические проблемы</h3>
+                    <p>Наркотики часто используют как способ убежать от депрессии, стресса или одиночества. Но это лишь усугубляет проблему, создавая замкнутый круг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция последствий -->
+    <section id="consequences" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Цена одной дозы</h2>
+            <div class="facts-grid">
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Физическое здоровье</h3>
+                    <p>Разрушение печени, почек, сердца и легких. Высокий риск передозировки, ВИЧ и гепатита. Необратимые изменения в мозге.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Психика</h3>
+                    <p>Паранойя, галлюцинации, потеря памяти, полная деградация личности. Человек перестает быть собой.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-color);">
+                    <h3>Социальная жизнь</h3>
+                    <p>Потеря работы, учебы, друзей и семьи. Криминал и тюрьма становятся частыми спутниками зависимости.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция помощи -->
+    <section id="help" class="help-section">
+        <div class="container">
+            <h2 class="section-title">Выход есть всегда</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                Зависимость — это болезнь, которую можно лечить. Не бойтесь просить о помощи. 
+                Это анонимно и бесплатно.
+            </p>
+            
+            <p>Всероссийский телефон доверия для детей, подростков и их родителей:</p>
+            <a href="tel:88002000122" class="phone-number">8-800-2000-122</a>
+            
+            <p>Скорая помощь:</p>
+            <a href="tel:103" class="phone-number">103</a>
+            
+            <br>
+            <a href="#" class="btn" onclick="alert('Здесь может быть форма для записи к специалисту')">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container" style="flex-direction: column;">
+            <p>&copy; 2023 Проект "Здоровый Выбор". Все права защищены.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Информация на сайте носит ознакомительный характер.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипт для плавного скролла -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
